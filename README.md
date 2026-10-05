@@ -1,23 +1,22 @@
-# End-to-End-Visual-Quality-Inspection-and-Anomaly-Detection-Pipeline-for-Industrial-Manufacturing
+# Visual Quality Inspection & Anomaly Detection Pipeline
 
-cv-manufacturing-defect-detection/
-├── data/
-│   ├── raw/                  # Place raw images here
-│   └── processed/            # Preprocessed and normalized data
-├── models/
-│   ├── backbone.py           # Feature extractor (ResNet/EfficientNet)
-│   └── anomaly_detector.py   # Mahalanobis / PatchCore / Autoencoder modules
-├── notebooks/
-│   └── exploration.ipynb     # Initial EDA and data visualization
-├── src/
-│   ├── dataset.py            # Custom PyTorch Dataset & DataLoaders
-│   ├── utils.py              # Metrics, visualizers, image I/O
-│   └── augmentations.py     # Albumentations pipeline
-├── weights/
-│   └── .gitkeep              # Directory to store trained checkpoints
-├── train.py                  # Main training entry point (CLI)
-├── infer.py                  # Pipeline execution / inference script (CLI)
-├── evaluate.py               # Quantitative evaluation script (CLI)
-├── README.md                 # Setup, configuration, and execution guide
-├── requirements.txt          # Explicitly pinned python dependencies
-└── .gitignore                # Excludes checkpoints, raw data, and cache
+An end-to-end Computer Vision system built with PyTorch and OpenCV for real-time visual defect detection on manufacturing assembly lines.
+
+---
+
+## Project Setup & Environment Creation
+
+### 1. Prerequisites
+* Python 3.9+ or Python 3.10
+* CUDA-compatible GPU (Optional, CPU execution is fully supported)
+
+### 2. Virtual Environment Setup
+```bash
+# Clone the public repository
+git clone [https://github.com/](https://github.com/)<your-username>/cv-manufacturing-defect-detection.git
+cd cv-manufacturing-defect-detection
+
+# Create and activate a virtual environment
+python3 -m venv venv
+source venv/bin/activate        # On Linux/macOS
+# venv\Scripts\activate          # On Windows
